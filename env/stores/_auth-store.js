@@ -1,5 +1,5 @@
 import { action, computed, observable } from 'mobx';
-import firebase from 'firebase';
+const firebase = require('firebase/app');
 import { auth } from './';
 
 let store = null;
@@ -8,6 +8,7 @@ class Store {
     @observable user = null;
 
     constructor(isServer) {
+        if (isServer) return;
         this.unwatchAuth = auth.onAuthStateChanged(user => {
             this.user = user;
         });
@@ -40,7 +41,7 @@ class Store {
 
 export default function initStore (isServer) {
     if (isServer && typeof window === 'undefined') {
-        return new Store(isServer)
+        return;
     } else {
         if (store === null) {
             store = new Store(isServer)

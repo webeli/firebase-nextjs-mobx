@@ -18,3 +18,4 @@ export const db = firebase.database();
 
 export { default as initBaseStore } from './_base-store';
 export { default as initAuthStore } from './_auth-store';
+export { default as initHashStore } from './_hash-store';

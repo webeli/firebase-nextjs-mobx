@@ -7,14 +7,13 @@ export default function initializePage(UI) {
         static getInitialProps({req}) {
             const isServer = !!req;
             const baseStore = initBaseStore(isServer);
-            const authStore = initAuthStore(isServer);
             return {helloMessage: baseStore.helloMessage, isServer}
         }
 
         constructor(props) {
             super(props);
             this.baseStore = initBaseStore(props.isServer, props.helloMessage);
-            this.authStore = initAuthStore(props.isServer);
+            this.authStore = initAuthStore(false);
         }
 
         render() {
