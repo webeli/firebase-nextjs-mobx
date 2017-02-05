@@ -1,11 +1,12 @@
-import { HashItem } from './';
+import React from 'react'
+import { HashItem } from './'
 
 const HashList = ({ hashes }) => (
-    <div>
-        {hashes.map(
-            hash => <HashItem key={hash.created} hash={hash}/>
+  <div>
+    {hashes.map(
+            hash => <HashItem key={hash.created} hash={hash} />,
         )}
-    </div>
-);
+  </div>
+)
 
-export default HashList;
+export default HashList

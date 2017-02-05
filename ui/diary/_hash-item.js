@@ -1,7 +1,9 @@
-const HashItem = ({ hash }) => (
-    <div>
-        {hash.text}
-    </div>
-);
+import React from 'react'
 
-export default HashItem;
+const HashItem = ({ hash }) => (
+  <div>
+    {hash.text}
+  </div>
+)
+
+export default HashItem

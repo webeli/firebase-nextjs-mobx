@@ -1,7 +1,9 @@
-const HashInput = ({ value, callback, disabled }) => (
-    <div>
-        <input type="text" value={value} onChange={e => callback(e.target.value)} disabled={disabled} />
-    </div>
-);
+import React from 'react'
 
-export default HashInput;
+const HashInput = ({ value, callback, disabled }) => (
+  <div>
+    <input type='text' value={value} onChange={e => callback(e.target.value)} disabled={disabled} />
+  </div>
+)
+
+export default HashInput

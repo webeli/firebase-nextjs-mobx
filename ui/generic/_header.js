@@ -1,14 +1,15 @@
-import Link from 'next/prefetch';
-import { FriendlyHello, AvatarWidget, HashIcon } from './';
+import React from 'react'
+import Link from 'next/prefetch'
+import { FriendlyHello, AvatarWidget, HashIcon } from './'
 
 const Header = () => (
-    <header className="header">
-        <Link href="/"><a>Home</a></Link>
-        <Link href="/diary"><a>Diary</a></Link>
-        <FriendlyHello />
-        <AvatarWidget />
-        <HashIcon />
-    </header>
-);
+  <header className='header'>
+    <Link href='/'><a>Home</a></Link>
+    <Link href='/diary'><a>Diary</a></Link>
+    <FriendlyHello />
+    <AvatarWidget />
+    <HashIcon />
+  </header>
+)
 
-export default Header;
+export default Header

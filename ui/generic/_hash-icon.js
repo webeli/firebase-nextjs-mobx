@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
 const HashIcon = () => (
-    <div>
-        #
-    </div>
-);
+  <div>
+    #
+  </div>
+)
 
-export default HashIcon;
+export default HashIcon
